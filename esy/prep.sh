@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cp -rp harfbuzz-1.9.0 _build
 
 cd _build

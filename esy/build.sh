@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cd _build
 
 # Automake gets brought in unnecessarily for the release package - 
@@ -14,8 +16,21 @@ touch src/harfbuzz-subset.def
 touch src/harfbuzz-icu.def
 touch src/harfbuzz-gobject.def
 
-echo "**BUILD STARTED**"
-make
-echo "**BUILD COMPLETE**"
-make install
-
+while [ "$1" != "" ]; do
+    case $1 in
+        --os=unix)  
+            echo "**BUILD STARTED**"
+            gmake
+            echo "**BUILD COMPLETE**"
+            gmake install
+            break
+        ;;
+        *)
+            echo "**BUILD STARTED**"
+            make
+            echo "**BUILD COMPLETE**"
+            make install
+            break
+        ;;
+    esac
+done
