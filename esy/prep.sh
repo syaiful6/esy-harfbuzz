@@ -1,4 +1,4 @@
-cp -rp harfbuzz-2.6.8 _build
+cp -rp harfbuzz-2.8.2 _build
 
 cd _build
 
