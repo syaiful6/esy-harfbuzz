@@ -1,3 +1,3 @@
-cd _build
+cd _build/build
 
-./configure --enable-static=yes --enable-shared=no --prefix=$cur__install --host=x86_64-w64-mingw32
+cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=$cur__install 

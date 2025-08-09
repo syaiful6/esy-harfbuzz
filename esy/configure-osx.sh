@@ -1,2 +1,3 @@
-cd _build
-./configure --enable-shared=no --enable-static=yes --with-pic=yes --prefix=$cur__install --disable-dependency-tracking
+cd _build/build
+
+cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=$cur__install 

@@ -1,7 +1,3 @@
-cp -rp harfbuzz-2.6.8 _build
+cp -rp harfbuzz-11.3.3 _build
 
-cd _build
-
-# Create harfbuzz.def to skip generating python definitions
-touch src/harfbuzz.def
-touch src/*.hh
+mkdir -p _build/build
